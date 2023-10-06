@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -115,6 +115,7 @@
             background-image: url('./loc.png');
             background-size: cover;
             color: white;
+
         }
 
         #icon-SP {
@@ -938,7 +939,6 @@
                 "BELMIRO BRAGA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 13 },
                 "BICAS-MG": { DiasAtendimento: ["X", "S", "S", "X", "S"], PrazoTotal: 3 },
                 "CHACARA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 13 },
-                "CENTRALINA-MG": { DiasAtendimento: ["x", "S", "x", "x", "x"], PrazoTotal: 13 },
 
                 "CHACARA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 13 },
                 "CHIADOR-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 13 },
@@ -4026,7 +4026,8 @@
 
                 if (prazos[chave]) {
                     const diasAtendimento = prazos[chave].DiasAtendimento;
-                    const prazoTotal = prazos[chave].PrazoTotal;
+                    const prazoTotalJuridica = prazos[chave].PrazoTotal;
+                    const prazoTotalFisica = prazoTotalJuridica + 2; // Adicionar 2 dias para pessoa física
                     const diasSemana = ["Seg", "Ter", "Qua", "Qui", "Sex"];
 
                     const diasAtendimentoHTML = diasSemana.map((dia, index) => {
@@ -4040,7 +4041,9 @@
                     }).join('');
 
                     resultadoDiv.innerHTML = `
-            <p>Prazo Total: ${prazoTotal} dias</p>
+            <p>Prazo de entrega</p>
+            <p>Pessoa Jurídica: ${prazoTotalJuridica} dias</p>
+            <p>Pessoa Física: ${prazoTotalFisica} dias</p>
             <p>Dias de Atendimento:</p>
             <div class="days-container">
                 <table>
@@ -4054,6 +4057,7 @@
             }
 
         </script>
+        
 </body>
 
 </html>
