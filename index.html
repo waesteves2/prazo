@@ -14,25 +14,24 @@
             margin: 0;
             padding: 0;
             color: #fff;
-
         }
-
+    
         #consulta {
             margin-top: 50px;
         }
-
+    
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
-
+    
         label {
             font-size: 20px;
             color: #ccc;
             display: block;
             margin-bottom: 10px;
         }
-
+    
         input[type="text"],
         select {
             padding: 10px;
@@ -42,7 +41,7 @@
             margin-right: 10px;
             width: 200px;
         }
-
+    
         button {
             background-color: #007bff;
             color: #fff;
@@ -53,49 +52,42 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
+    
         button:hover {
             background-color: #0056b3;
         }
-
+    
         #resultado {
             margin-top: 20px;
             padding: 30px;
-
-
         }
-
-
+    
         .checkmark {
             color: green;
             margin: 15px;
-
         }
-
+    
         .x-mark {
             color: red;
             margin: 15px;
-
         }
-
+    
         .day-label {
             font-size: 20px;
             float: left;
             margin: 10px;
         }
-
+    
         .days-container {
-
             border: 1px solid;
             color: #0056b3;
             background-color: white;
             border-radius: 5px;
             text-align: center;
             display: inline-block;
-
         }
     </style>
-
+    
     <style>
         .map {
             background-image: url('./mapa.png');
@@ -105,9 +97,8 @@
             background-repeat: no-repeat;
             background-size: contain;
             margin: auto;
-
         }
-
+    
         .location-icon {
             width: 20px;
             height: 20px;
@@ -115,134 +106,119 @@
             background-image: url('./loc.png');
             background-size: cover;
             color: white;
-
         }
-
+    
         #icon-SP {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-GO {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-MG {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-PR {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-SC {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-RS {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-MS {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-MT {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-DF {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-RO {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-AC {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-RJ {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
+    
         #icon-ES {
-
             width: 30px;
             height: 35px;
             background-size: contain;
             background-repeat: no-repeat;
             font-size: 10px;
         }
-
-
-
+    
         .p {
             text-align: center;
             position: relative;
             top: 20px;
         }
     </style>
+    
 </head>
 
 <body>
@@ -1994,7 +1970,7 @@
                 "IPIRANGA-PR": { DiasAtendimento: ["S", "X", "X", "X", "X"], PrazoTotal: 6 },
                 "IPIRANGA-PR": { DiasAtendimento: ["S", "X", "X", "X", "X"], PrazoTotal: 6 },
                 "IRATI-PR": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 3 },
-                "IVAI-PR": { DiasAtendimento: ["X", "X", "S", "X", "X"], PrazoTotal: 6 },
+                "IVAI-PR": { DiasAtendimento: ["X", "X", "X", "S", "X"], PrazoTotal: 6 },
                 "PALMEIRA-PR": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
                 "PIRAI DO SUL-PR": { DiasAtendimento: ["X", "X", "X", "S", "X"], PrazoTotal: 6 },
                 "PONTA GROSSA-PR": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
@@ -2511,7 +2487,7 @@
                 "BALNEARIO PINHAL-RS": { DiasAtendimento: ["X", "S", "X", "S", "S"], PrazoTotal: 4 },
                 "CAPAO DA CANOA-RS": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 3 },
                 "CAPIVARI DO SUL-RS": { DiasAtendimento: ["X", "S", "X", "S", "S"], PrazoTotal: 4 },
-                "CARAA-RS": { DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 5 },
+                "CARAA-RS": { DiasAtendimento: ["X", "X", "S", "X", "X"], PrazoTotal: 5 },
                 "CIDREIRA-RS": { DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 5 },
                 "DOM PEDRO DE ALCANTARA-RS": { DiasAtendimento: ["X", "X", "S", "X", "S"], PrazoTotal: 5 },
                 "GLORINHA-RS": { DiasAtendimento: ["X", "S", "X", "S", "S"], PrazoTotal: 4 },
@@ -4024,6 +4000,51 @@
                 "PADRE BERNARDO-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
                 "PLANALTINA-GO": { DiasAtendimento: ["S", "X", "X", "S", "X"], PrazoTotal: 3 },
                 "VALPARAISO DE GOIAS-GO": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 3 },
+                "ARCEBURGO-MG":{DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4},
+                "JACUTINGA-MG":{DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4},
+                "ITURAMA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2},
+                "CARNEIRINHO-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6},
+                "LIMEIRA DO OESTE-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 8 },
+                "CAMPO ERE-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
+                "DIONISIO CERQUEIRA-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
+                "PALMA SOLA-SC": { DiasAtendimento: ["X", "X", "X", "S", "X"], PrazoTotal: 6 },
+                "COLOMBIA-SP": { DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4 },
+                "CACONDE-MG": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "TAPIRATIBA-SP": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "BOM JESUS DO NORTE-ES": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 7 },
+                "SAO JOSE DO CALCADO-ES": { DiasAtendimento: ["X", "X", "S", "X", "S"], PrazoTotal: 7 },
+                "SAO SIMAO-GO": { DiasAtendimento: ["S", "X", "X", "S", "X"], PrazoTotal: 4 },
+                "ARAPORA-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "CANAPOLIS-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "CENTRALINA-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "TUPACIGUARA-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "ANTONIO OLINTO-PR": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "CAMPO DO TENENTE-PR": { DiasAtendimento: ["S", "X", "X", "X", "X"], PrazoTotal: 6 },
+                "PIEN-PR": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "RIO NEGRO-PR": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+                "SAO JOAO DO TRIUNFO-PR": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
+                "SAO MATEUS DO SUL-PR": { DiasAtendimento: ["X", "S", "S", "X", "S"], PrazoTotal: 7 },
+                "CACHOEIRA ALTA-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "CACU-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "ITAGUACU-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "ITARUMA-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "LAGOA SANTA-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "ITAJA-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "PARANAIGUARA-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "ITAGUACU-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
+                "NOVO HORIZONTE-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
+                "SAO LOURENCO DO OESTE-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
+                "SAO BERNADINO-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
+                "SIQUEIRA CAMPOS-PR": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 2 },
+                "ALBERTINA-MG": { DiasAtendimento: ["S", "X", "X", "X", "X"], PrazoTotal: 6 },
+                "ANDRADAS-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+                "GARUVA-SC": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+                "ITAPOA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+                "IRINEOPOLIS-SC": { DiasAtendimento: ["X", "X", "X", "X", "S"], PrazoTotal: 2 },
+                "PORTO UNIAO-SC": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+
+
+
             };
 
             function consultarPrazo() {
