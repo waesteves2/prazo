@@ -4039,7 +4039,7 @@
                 "ALBERTINA-MG": { DiasAtendimento: ["S", "X", "X", "X", "X"], PrazoTotal: 6 },
                 "ANDRADAS-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
                 "GARUVA-SC": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
-                "ITAPOA-SC": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+                "ITAPOA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
                 "IRINEOPOLIS-SC": { DiasAtendimento: ["X", "X", "X", "X", "S"], PrazoTotal: 2 },
                 "PORTO UNIAO-SC": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
 
@@ -4055,7 +4055,7 @@
 
                 if (prazos[chave]) {
                     const diasAtendimento = prazos[chave].DiasAtendimento;
-                    const prazoTotalJuridica = prazos[chave].PrazoTotal;
+                    const prazoTotalJuridica = prazos[chave].PrazoTotal + 3;// serve para aumentar os dias do prazo
                     const prazoTotalFisica = prazoTotalJuridica + 2; // Adicionar 2 dias para pessoa física
                     const diasSemana = ["Seg", "Ter", "Qua", "Qui", "Sex"];
 
