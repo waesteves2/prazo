@@ -15,23 +15,23 @@
             padding: 0;
             color: #fff;
         }
-    
+
         #consulta {
             margin-top: 50px;
         }
-    
+
         h1 {
             font-size: 36px;
             margin-bottom: 20px;
         }
-    
+
         label {
             font-size: 20px;
             color: #ccc;
             display: block;
             margin-bottom: 10px;
         }
-    
+
         input[type="text"],
         select {
             padding: 10px;
@@ -41,7 +41,7 @@
             margin-right: 10px;
             width: 200px;
         }
-    
+
         button {
             background-color: #007bff;
             color: #fff;
@@ -52,32 +52,32 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-    
+
         button:hover {
             background-color: #0056b3;
         }
-    
+
         #resultado {
             margin-top: 20px;
             padding: 30px;
         }
-    
+
         .checkmark {
             color: green;
             margin: 15px;
         }
-    
+
         .x-mark {
             color: red;
             margin: 15px;
         }
-    
+
         .day-label {
             font-size: 20px;
             float: left;
             margin: 10px;
         }
-    
+
         .days-container {
             border: 1px solid;
             color: #0056b3;
@@ -87,7 +87,7 @@
             display: inline-block;
         }
     </style>
-    
+
     <style>
         .map {
             background-image: url('./mapa.png');
@@ -98,7 +98,7 @@
             background-size: contain;
             margin: auto;
         }
-    
+
         .location-icon {
             width: 20px;
             height: 20px;
@@ -107,7 +107,7 @@
             background-size: cover;
             color: white;
         }
-    
+
         #icon-SP {
             width: 30px;
             height: 35px;
@@ -115,7 +115,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-GO {
             width: 30px;
             height: 35px;
@@ -123,7 +123,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-MG {
             width: 30px;
             height: 35px;
@@ -131,7 +131,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-PR {
             width: 30px;
             height: 35px;
@@ -139,7 +139,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-SC {
             width: 30px;
             height: 35px;
@@ -147,7 +147,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-RS {
             width: 30px;
             height: 35px;
@@ -155,7 +155,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-MS {
             width: 30px;
             height: 35px;
@@ -163,7 +163,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-MT {
             width: 30px;
             height: 35px;
@@ -171,7 +171,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-DF {
             width: 30px;
             height: 35px;
@@ -179,7 +179,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-RO {
             width: 30px;
             height: 35px;
@@ -187,7 +187,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-AC {
             width: 30px;
             height: 35px;
@@ -195,7 +195,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-RJ {
             width: 30px;
             height: 35px;
@@ -203,7 +203,7 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         #icon-ES {
             width: 30px;
             height: 35px;
@@ -211,23 +211,176 @@
             background-repeat: no-repeat;
             font-size: 10px;
         }
-    
+
         .p {
             text-align: center;
             position: relative;
             top: 20px;
         }
+
+        button {
+            position: relative;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .icon {
+            color: #fff;
+        }
     </style>
-    
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 10px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            /* Garante que o ícone do menu fique acima do modal */
+            color: #f7f7f7;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .modal-item {
+            cursor: pointer;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-icon {
+            font-size: 36px;
+            margin-right: 10px;
+        }
+
+        .modal-label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #ff3333;
+            cursor: pointer;
+        }
+
+        .modal-icon {
+            cursor: pointer;
+            font-size: 36px;
+            margin: 10px;
+            display: inline;
+
+        }
+
+        .info-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 3;
+            color: black;
+            width: 80%;
+            height: 90%;
+            overflow-y: auto;
+        }
+
+        #close-info-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #ff3333;
+            cursor: pointer;
+        }
+
+
+
+        #info-contatos {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .close-info-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: #ff3333;
+            cursor: pointer;
+        }
+
+        .contato-item {
+            margin: 10px 0;
+        }
+
+        .contato-label {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .contato-link {
+            text-decoration: none;
+            color: #004899;
+            font-weight: bold;
+        }
+    </style>
+
 </head>
 
 <body>
-    <h1>Prazo de Entrega</h1>
-    <div id="consulta">
-        <label for="cidade">Digite a cidade:</label>
-        <input type="text" id="cidade">
-        <label for="estado">Selecione o estado:</label>
-        <select id="estado" onchange="mostrarLocalizacao()">
+    <br>
+    <br>
+    <a href="http://www.rte.com.br" target="_blank">
+        <img src="./logo sem fundo.png" alt="" width="350">
+    </a>
+    <div id="consulta" style="text-align: center; margin-top: 20px;">
+        <label for="cidade" style="font-size: 16px;">Digite o nome da cidade:</label>
+        <input type="text" id="cidade" style="padding: 8px; margin-right: 10px; font-size: 14px;">
+
+        <label for="estado" style="font-size: 16px;">Selecione o estado:</label>
+        <select id="estado" onchange="mostrarLocalizacao()" style="padding: 8px; font-size: 14px;">
             <option value="">Selecionar</option>
             <option value="AC">AC</option>
             <option value="DF">DF</option>
@@ -243,9 +396,139 @@
             <option value="SC">SC</option>
             <option value="SP">SP</option>
         </select>
+
         <br><br>
-        <button onclick="consultarPrazo()">Consultar</button>
+
+        <button onclick="consultarPrazo()"
+            style="background-color: #3498db; color: #fff; padding: 10px 20px; font-size: 16px; border: none; cursor: pointer;">
+            Consultar
+            <span class="icon" style="color: #fff; margin-left: 5px; font-size: 18px;">&#128269;</span>
+        </button>
+
+
+        <div id="menu-icon" onclick="toggleModal()">&#9776;</div>
+        <div id="modal">
+            <div id="modal-content" style="color: black;">
+                <div id="close-btn" onclick="toggleModal()">X</div>
+                <div class="modal-item" onclick="openInfoModal('empresa')">
+                    <span class="modal-icon">&#x1F3E2;</span>
+                    <span class="modal-label">Empresa</span>
+                </div>
+                <div class="modal-item" onclick="openInfoModal('contatos')">
+                    <span class="modal-icon">&#x1F4DE;</span>
+                    <span class="modal-label">Contatos</span>
+                </div>
+                <div class="modal-item" onclick="openInfoModal('localizacao')">
+                    <span class="modal-icon">&#x1F4CD;</span>
+                    <span class="modal-label">Localização</span>
+                </div>
+                <div class="modal-item" onclick="openInfoModal('transportadora')">
+                    <span class="modal-icon">&#x1F69A;</span>
+                    <span class="modal-label">Transportadora</span>
+                </div>
+                <div class="modal-item" onclick="openInfoModal('email')">
+                    <span class="modal-icon">&#x1F4E7;</span>
+                    <span class="modal-label">E-mail</span>
+                </div>
+                <div class="modal-item" onclick="mostrarHistorico('historico')">
+                    <span class="modal-icon">&#x1F4DD;</span>
+                    <span class="modal-label">Histórico</span>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <!-- Janelinha de informações -->
+    <div id="info-empresa" class="info-modal">
+        <div class="close-info-btn" onclick="closeInfoModal()">X</div>
+        <!-- Conteúdo da janelinha de informações da empresa -->
+        <h2 style="color: #004899; text-align: center; margin-bottom: 20px;">Informações Transportadora</h2>
+        <div style="text-align: left; margin: 10px;">
+            <p style="margin-bottom: 10px;"><strong>Razão Social:</strong> Rodonaves Transportes</p>
+            <p style="margin-bottom: 10px;"><strong>CNPJ:</strong> 44.914.992/0001-38</p>
+            <p style="margin-bottom: 10px;"><strong>Endereço:</strong> Rua General Soares dos Santos</p>
+        </div>
+    </div>
+
+
+
+    <div id="info-contatos" class="info-modal">
+        <div class="close-info-btn" onclick="closeInfoModal()">X</div>
+        <div class="contato-item">
+            <span class="contato-label">Telefone Fixo:</span>
+            <a class="contato-link" href="tel:1421042600">14-2104 2600</a>
+        </div>
+        <div class="contato-item">
+            <span class="contato-label">Whatsapp:</span>
+            <a class="contato-link" href="https://wa.me/5514998577463" target="_blank">
+                <img src="https://seeklogo.com/images/W/whatsapp-icon-logo-BDC0A8063B-seeklogo.com.png"
+                    alt="Ícone do WhatsApp" width="20">
+                (14) 99857-7463
+            </a>
+        </div>
+    </div>
+
+
+
+    <div id="info-localizacao" class="info-modal">
+        <div class="close-info-btn" onclick="closeInfoModal()">X</div>
+
+        Endereço: RTE Rodonaves<br>
+        <div id="info-localizacao" class="info-modal">
+            <div class="close-info-btn" onclick="closeInfoModal()">X</div>
+            <a href="https://maps.app.goo.gl/1pW6DMXV5BGVF8Cs8" target="_blank">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipOdCLEovI_sw9yygCqkEq02TTQ47oDR0Ku9Y5Da=w408-h306-k-no"
+                    alt="Fachada da Empresa" style="max-width: 100%; height: auto;">
+            </a>
+        </div>
+
+    </div>
+
+
+    <div id="info-transportadora" class="info-modal">
+        <div class="close-info-btn" onclick="closeInfoModal()">X</div>
+        <!-- Conteúdo da janelinha de informações da transportadora -->
+        <p>Informações da transportadora...</p>
+    </div>
+
+    <div id="info-email" class="info-modal">
+        <div class="close-info-btn" onclick="closeInfoModal()">X</div>
+        <!-- Conteúdo da janelinha de informações de e-mail -->
+        <h3>E-mail para Gerência</h3>
+        <p>E-mail: <a href="mailto:rte304@rte.com.br">rte304@rte.com.br</a></p>
+
+        <h3>E-mail para Coletas</h3>
+        <p>E-mail: <a href="mailto:coletareversa@rte.com.br">coletareversa@rte.com.br</a></p>
+    </div>
+
+
+    <script>
+        function toggleModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'flex' : 'none';
+        }
+
+        function openInfoModal(type) {
+            var infoModal = document.getElementById('info-' + type);
+            infoModal.style.display = 'block';
+        }
+
+        function closeInfoModal() {
+            var infoModals = document.querySelectorAll('.info-modal');
+            infoModals.forEach(function (modal) {
+                modal.style.display = 'none';
+            });
+        }
+    </script>
+
+    <script>
+        function toggleModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'flex' : 'none';
+        }
+    </script>
+
 
     <div class="map" id="mapa">
         <div class="location-icon" id="icon-SP" style="left: 205px; top: 215px;">
@@ -4000,10 +4283,10 @@
                 "PADRE BERNARDO-GO": { DiasAtendimento: ["X", "S", "X", "X", "S"], PrazoTotal: 4 },
                 "PLANALTINA-GO": { DiasAtendimento: ["S", "X", "X", "S", "X"], PrazoTotal: 3 },
                 "VALPARAISO DE GOIAS-GO": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 3 },
-                "ARCEBURGO-MG":{DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4},
-                "JACUTINGA-MG":{DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4},
-                "ITURAMA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2},
-                "CARNEIRINHO-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6},
+                "ARCEBURGO-MG": { DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4 },
+                "JACUTINGA-MG": { DiasAtendimento: ["X", "S", "X", "S", "X"], PrazoTotal: 4 },
+                "ITURAMA-MG": { DiasAtendimento: ["S", "S", "S", "S", "S"], PrazoTotal: 2 },
+                "CARNEIRINHO-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 6 },
                 "LIMEIRA DO OESTE-MG": { DiasAtendimento: ["X", "S", "X", "X", "X"], PrazoTotal: 8 },
                 "CAMPO ERE-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
                 "DIONISIO CERQUEIRA-SC": { DiasAtendimento: ["S", "X", "S", "X", "S"], PrazoTotal: 3 },
